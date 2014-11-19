@@ -14,10 +14,9 @@ Smallest and incomplete language with static typing for big but simple config fi
 # This is comment and nobody cares what you'll write after '#'
 
 :text: text_variable
-Multiline
+Multiline text
 value for
 variable name
-untill next '"' in beginning of line
 
 # Array should contain values of one type and they should be splitted by ', '
 :array: array_variable
