@@ -56,3 +56,4 @@ There are only 4 types of variables:
 ## Parsers
 
 - [gimlr](https://github.com/gazay/gimlr) - Ruby
+- [gimlh](https://github.com/gazay/gimlh) - Haskell
