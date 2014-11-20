@@ -6,7 +6,8 @@ By Alexey Gaziev.
 
 ## Objectives
 
-Smallest and incomplete language for big but simple config files. It should be so simple that you can write fast parser for it in few LOC and without heavy dependencies.
+Smallest and incomplete language for big but simple config files.
+It should be so simple that you can write fast parser for it in few LOC and without heavy dependencies.
 
 ## Example
 
@@ -52,6 +53,21 @@ There are only 4 types of variables:
 2. `text`   - text value. All what goes under name of variable will be parsed as one line of text, splitted if needed with `\n` symbol.
 3. `list`   - single level list of values. Values will parsed as `text`. Values should be splitted by `, `.
 4. `vlist`  - same as `list`, but values splitted with `- ` and each value on separate line.
+
+## Why not [TOML](https://github.com/toml-lang/toml)?
+
+TOML is super language for obvious config files.
+But it is a little more complicated than needed
+if you want to write not really a config file
+for example for database but some file with a lot of data,
+like arrays of fake names in faker libraries in any language.
+
+Also this language was written for my Haskell education project
+and I don't really want to dig into parsing
+YAML there (it's super complicated for me for now) or
+install and study other heavy parsers with lots of dependencies for simple data file.
+I want to have parser which was written in pure language,
+like a script or just a module, without any heavy dependencies and with simple output.
 
 ## Parsers
 
