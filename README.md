@@ -6,7 +6,7 @@ By Alexey Gaziev.
 
 ## Objectives
 
-Smallest and incomplete language with typed data for big but simple config files.
+Smallest and incomplete language for big but simple config files.
 
 ## Example
 
