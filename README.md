@@ -30,7 +30,8 @@ Some, string\, with, another
 :list: numeric_list_variable_name
 1, 2, 3, 4
 
-# Vertical list is the same as list. Values should be written each on separate line with '- ' in beginning
+# Vertical list is the same as list.
+# Values should be written each on separate line with '- ' in beginning
 :vlist: vertical_list_variable_name
 - value
 - another value
