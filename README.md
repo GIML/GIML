@@ -6,39 +6,39 @@ By Alexey Gaziev.
 
 ## Objectives
 
-Smallest and incomplete language for big but simple config files.
+Smallest and incomplete language for big but simple config files. It should be so simple that you can write fast parser for it in few LOC and without heavy dependencies.
 
 ## Example
 
 ```giml
 # This is comment and nobody cares what you'll write after '#'
 
-:text: text_variable
+:text: text_variable_name
 Multiline text
 value for
 variable name
 
 # List values should be splitted by ', '. They will be parsed as strings
-:list: list_variable
+:list: list_variable_name
 Some, string, with, another
 
 # This list will be parsed with three elements, because ',' was escaped with '\'
-:list: escaped_list_variable
+:list: escaped_list_variable_name
 Some, string\, with, another
 
-:list: numeric_list_variable
+:list: numeric_list_variable_name
 1, 2, 3, 4
 
 # Vertical list is the same as list. Values should be written each on separate line with '- ' in beginning
-:vlist: vertical_list_variable
+:vlist: vertical_list_variable_name
 - value
 - another value
 - values in list should be all of one type
 
-:num: numeric_variable
+:num: numeric_variable_name
 123
 
-:num: float_number_variable
+:num: float_number_variable_name
 123.321
 ```
 
