@@ -55,7 +55,50 @@ There are only 4 types of variables:
 3. `list`   - single level list of values. Values will parsed as `text`. Values should be splitted by `, `.
 4. `vlist`  - same as `list`, but values splitted with `- ` and each value on separate line.
 
-### List
+### :num:
+
+Numeric value. Contains only one number. Can be integer or float with format: `/\d+\.?\d*/`
+
+```giml
+:num: some_num
+# This line will be ignored and one below too
+
+1234
+
+# This will be parsed as { "some_num" => 1234 }
+
+:num: only_last_number_matters
+
+1
+2
+
+# This will be parsed as { "only_last_number_matters" => 2 }
+
+:num: some_float
+
+123.123
+
+# This will be parsed as { "some_float" => 123.123 }
+```
+
+### :text:
+
+Multiline text value. Empty lines in beginning and end of text will be truncated.
+
+```giml
+:text: some_text
+
+# Both lines above and below will be ignored
+
+This is some
+multiline text
+
+value.
+
+# This will be parsed as { "some_text" => "This is some\nmultiline text\n\nvalue." }
+```
+
+### :list:
 
 Single level list of text values. Lines without any text will be ignored.
 Values should be splitted with ", ".
@@ -70,7 +113,7 @@ Comma in the end of line not required and will be removed during parsing.
 # Comma in the end of line above will be ignored
 5, 6, 7, 8
 
-# This will be parsed as ["1", "2", "3", "4", "5", "6", "7", "8"]
+# This will be parsed as { "some_list" => ["1", "2", "3", "4", "5", "6", "7", "8"] }
 ```
 
 If you need to save ", " as part of one of values – you can escape it like that:
@@ -78,6 +121,24 @@ If you need to save ", " as part of one of values – you can escape it like tha
 :list: some_list
 
 first value, second value\, with escaped comma, third value
+
+# This will be parsed as { "some_list" => ["first_value", "second value, with escaped comma", "third value"] }
+```
+
+### :vlist:
+
+Single level list of text values. Lines without any text will be ignored.
+Values should be on separate lines with "- " in beginning
+
+```giml
+:vlist: some_list
+
+- 1
+
+- 2
+- 3
+
+# This will be parsed as { "some_list" => ["1", "2", "3"] }
 ```
 
 ## Why not [TOML](https://github.com/toml-lang/toml)?
