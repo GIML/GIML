@@ -55,6 +55,31 @@ There are only 4 types of variables:
 3. `list`   - single level list of values. Values will parsed as `text`. Values should be splitted by `, `.
 4. `vlist`  - same as `list`, but values splitted with `- ` and each value on separate line.
 
+### List
+
+Single level list of text values. Lines without any text will be ignored.
+Values should be splitted with ", ".
+Comma in the end of line not required and will be removed during parsing.
+
+```giml
+:list: some_list
+
+# Both lines above and below will be ignored
+
+1, 2, 3, 4,
+# Comma in the end of line above will be ignored
+5, 6, 7, 8
+
+# This will be parsed as ["1", "2", "3", "4", "5", "6", "7", "8"]
+```
+
+If you need to save ", " as part of one of values – you can escape it like that:
+```giml
+:list: some_list
+
+first value, second value\, with escaped comma, third value
+```
+
 ## Why not [TOML](https://github.com/toml-lang/toml)?
 
 TOML is super language for obvious config files.
