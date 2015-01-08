@@ -33,6 +33,7 @@ Some, string\, with, another
 # Vertical list is the same as list.
 # Values should be written each on separate line with '- ' in beginning
 :vlist: vertical_list_variable_name
+- ###, really handy when value starts with #
 - value
 - another value
 - values in list should be all of one type
@@ -46,7 +47,7 @@ Some, string\, with, another
 
 ## Spec
 
-Variable names should be written in one word without special characters.
+Variable names should be written in one line (any symbols acceptabe) splitted from type by space.
 
 There are only 4 types of variables:
 
