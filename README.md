@@ -161,3 +161,4 @@ like a script or just a module, without any heavy dependencies and with simple o
 
 - [gimlr](https://github.com/GIML/gimlr) - Ruby
 - [gimlh](https://github.com/GIML/gimlh) - Haskell
+- [gimlex](https://github.com/GIML/gimlex) - Elixir
