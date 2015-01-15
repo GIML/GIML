@@ -159,5 +159,5 @@ like a script or just a module, without any heavy dependencies and with simple o
 
 ## Parsers
 
-- [gimlr](https://github.com/gazay/gimlr) - Ruby
-- [gimlh](https://github.com/gazay/gimlh) - Haskell
+- [gimlr](https://github.com/GIML/gimlr) - Ruby
+- [gimlh](https://github.com/GIML/gimlh) - Haskell
