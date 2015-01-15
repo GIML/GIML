@@ -47,7 +47,7 @@ Some, string\, with, another
 
 ## Spec
 
-Variable names should be written in one line (any symbols acceptabe) splitted from type by space.
+Variable names should be written in one line splitted from type by space. Can contain any symbols except `#`. Leading and trailing spaces will be stripped. Can contain comment.
 
 There are only 4 types of variables:
 
